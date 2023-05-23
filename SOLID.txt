@@ -1,0 +1,36 @@
+The SOLID Design Principles - software design principles introduced by Robert C. Martin (Uncle Bob):
+    * Single Responsbility Principle / Seperation of Concerns: If you define a Class, it should have a
+    primary responsibility (whatever it is meant to be doing) and should not take on other additional
+    responsibilities.
+    * Open-Closed Principle: When you add new functionality, you add it by extension and not by 
+    modification. Inherit base classes and extend them for more flexibility and sustainability
+    in your application. Classes should be open for extension and closed for modification.
+    * Liskov Substitution Principle: Objects of the Subclass should behave the same way and must 
+    be replaceable with objects of the Superclass. You should be able to substitute a base type 
+    for a subtype class.
+    * Interface Segregation Principle - split interfaces that are very large into smaller and more 
+    specific ones so that clients will only have to know about the methods that are of interest to them.
+    No code should be forced to depend on methods it does not use. (YAGNI - You Ain't Gonna Need It)
+    * Dependency Inversion Principle - High-level modules, which abstract away complex logic, should be easily 
+    reusable and unaffected by changes in low-level modules, which provide utility features. Use 
+    abstraction that decouples the high-level and low-level modules from each other. High-level modules
+    should not depend on Low-level modules. Similarly, the dependency graph of packages or components should 
+    have no cycles and Components should not be co-dependent or should not be mutually recursive (defined in 
+    terms of each other) as this affects independence and Scalability of the Software components.
+
+
+    GAMMA CATEGORIZATION:
+
+    Design Patterns are typically split into three categories (This is called 'Gamma Categorization' after
+    Erich Gamma, one of the authors of the original Design Patterns book!):
+        
+        * Creational Patterns - dealing with the creation (construction) of objects. The sub-types include
+        Explicit (using constructor functions) versus Implicit (Dependency Injection, Reflection etc.),
+        Wholesale (single statement for object creation) versus Piecewise (step-by-step object creation).
+        
+        * Structural Patterns - concerned mainly with the structure of Classes (eg: Class Members). mainly
+        of these patterns are wrappers which mimic the underlying Class's Interface. These patterns put a
+        lot of importance on good API design.
+
+        * Behavioural Patterns - these patterns donot follow a central theme (unique approach to solving 
+        problems), but may sometimes overlap with the other two types of patterns in their approach.
