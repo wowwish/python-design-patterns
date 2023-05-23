@@ -19,18 +19,120 @@ The SOLID Design Principles - software design principles introduced by Robert C.
     terms of each other) as this affects independence and Scalability of the Software components.
 
 
-    GAMMA CATEGORIZATION:
+GAMMA CATEGORIZATION:
 
-    Design Patterns are typically split into three categories (This is called 'Gamma Categorization' after
-    Erich Gamma, one of the authors of the original Design Patterns book!):
-        
-        * Creational Patterns - dealing with the creation (construction) of objects. The sub-types include
-        Explicit (using constructor functions) versus Implicit (Dependency Injection, Reflection etc.),
-        Wholesale (single statement for object creation) versus Piecewise (step-by-step object creation).
-        
-        * Structural Patterns - concerned mainly with the structure of Classes (eg: Class Members). mainly
-        of these patterns are wrappers which mimic the underlying Class's Interface. These patterns put a
-        lot of importance on good API design.
+Design Patterns are typically split into three categories (This is called 'Gamma Categorization' after
+Erich Gamma, one of the authors of the original Design Patterns book!):
+    
+    * Creational Patterns - dealing with the creation (construction) of objects. The sub-types include
+    Explicit (using constructor functions) versus Implicit (Dependency Injection, Reflection etc.),
+    Wholesale (single statement for object creation) versus Piecewise (step-by-step object creation).
+    
+    * Structural Patterns - concerned mainly with the structure of Classes (eg: Class Members). mainly
+    of these patterns are wrappers which mimic the underlying Class's Interface. These patterns put a
+    lot of importance on good API design.
 
-        * Behavioural Patterns - these patterns donot follow a central theme (unique approach to solving 
-        problems), but may sometimes overlap with the other two types of patterns in their approach.
+    * Behavioural Patterns - these patterns donot follow a central theme (unique approach to solving 
+    problems), but may sometimes overlap with the other two types of patterns in their approach.
+
+    
+
+DESIGN PATTERN SUMMARY
+
+
+
+    1. CREATIONAL DESIGN PATTERNS
+
+        * BUILDER:
+            - Seperate component for when object construction gets too complicated
+            - can create mutually cooperating sub-builders
+            - Often has a fluent interfaces
+
+        * FACTORIES:
+            - Factory method more expressive than an initializer (constructor)
+            - Factory can be an outside class or an inner class (class inside a class)
+        
+        * PROTOTYPE:
+            - Creation of object from an existing object
+            - Requires deep copy (coping the underlying data structure recursively including all members)
+
+        * SINGLETON:
+            - When you need to ensure that just a single instance of a class exists
+            - Easy to make with a decorator or metaclass in python
+            - Consider using dependency injection to solve problems with testability
+
+
+
+    2. STRUCTURAL DESIGN PATTERNS
+
+        * ADAPTOR:
+            - Converts the interface you get to the interface you need
+
+        * BRIDGE:
+            - Decouples abstraction from implementation to avoid Cartesian product complexity explosion
+        
+        * COMPOSITE:
+            - Allows clients to treat individual objects and composition of objects uniformly
+
+        * DECORATOR:
+            - Attach additional responsibilities to objects
+            - Python has functional decorators
+
+        * FACADE:
+            - Provide a single unified interface over a set of interfaces
+            - Friendly and easy-to-use, but can provide access to low-level features
+
+        * FLYWEIGHT:
+            - Efficiently support very large number of similar objects in memory
+
+        * PROXY:
+            - Provides a surrogate object that forwards calls to the real object while performing
+              additional functions like access control, communication, logging, etc.
+
+
+        
+    3. BEHAVIOURAL DESIGN PATTERNS
+
+        * CHAIN OF RESPONSIBILITY:
+            -  Allow components to process information/events in a chain, one-after-another
+            -  Each element in the chain refers to next element; or make a list and go through it
+
+        * COMMAND:
+            - Encapsulate a request into a seperate object
+            - Good for audit, replay, undo/reduction
+            - Part of Command Query Seperation / Command Query Responsibility Seperation (CQS/CQRS)
+
+        * INTERPRETER:
+            - Transform textual input into object-oriented structures
+            - Used by interpreters, compilers, static analysis tools etc.
+            - Compiler Theory is a seperate branch of computer science
+
+        * ITERATOR:
+            - Provides an interface for accessing elements of an aggregate object
+            - __iter__ / __next__ are stateful, but 'yield' is much more convenient (for generators)
+
+        * MEDIATOR:
+            - Provides mediation services between two objects
+            - Example: message passing, chat room
+
+        * MEMENTO:
+            - Makes tokens representing system states
+            - Tokens do not allow direct manipulation of underlying object, but can be used in
+              appropriate APIs
+
+        * OBSERVER:
+            - Allows notification of changes/happenings in a component, to which other components can
+              subscribe to and get notified when something happens
+
+        * STATE:
+            - We model systems by having one of many possible states and transitions between these states
+            - Such a system is called a "state machine"
+            - Special frameworks exist to orchestrate state machines
+        
+        * STRATEGY & TEMPLATE METHOD:
+            - Both patterns define a skeleton algorithm with details filled by implementors
+            - Strategy uses ordinary composition (sub-parts as arguments), Template Method uses inheritance
+
+        * VISITOR:
+            - Allows non-intrusive addition of functionality to hierarchies, allows traversal of 
+              complicated data structures which might have references to one another. 

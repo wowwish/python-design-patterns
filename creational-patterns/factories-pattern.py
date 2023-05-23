@@ -13,7 +13,7 @@
 # The factory pattern deals with 'wholesale' object creation (non-piecewise object creation, unlike the
 # Builder pattern) and it outsources this process through several ways:
 #   * A seperate method (Factory method - typically a class method)
-#   * A seperace Class (Factory class)
+#   * A seperate Class (Factory class)
 #   * A hierarchy of factories with Abstract Factory
 
 # A Factory is a component (any entity) reponsible solely for the wholesale (not piecewise) creation of Objects
