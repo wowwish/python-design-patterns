@@ -8,15 +8,14 @@
 # The Strategy Design Pattern is all about decomposing these two parts of the algorithm.
 # The High-level algorithm can be reused for other purposes. In this example, we can use the High-level
 # algorithm to create either coffee or hot chocolate. The Low-level parts for these use cases can be
-# specified by different beverage-specific Strategies and can be put into the High-level part for
-# creating a beverage-specific Strategy.
+# beverage-specific and can be put into the High-level part for creating a beverage-specific Strategy.
 
 # The Strategy Design Pattern enables the exact behaviour of a system (object) to be selected 
 # at runtime.
 
 # Essentially in the Strategy Pattern, you define an algorithm at a high-level and define an 
 # Interface that you expand for each Strategy (low-level implementation with details) to follow.
-# The Strategies create will provide for dynamic composition in the resulting object.
+# The Strategies created will provide for dynamic composition in the resulting object.
 
 
 # As an example, consider a text processor that can process different element types and output them to
